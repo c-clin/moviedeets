@@ -1,0 +1,90 @@
+.Home {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+}
+
+.Home .carousel {
+  width: 100%;
+  height: 100vh;
+}
+
+.Home .carousel img {
+  width: 100%;
+  background-size: cover;
+  height: auto;
+}
+
+.carousel-caption {
+  top: 20%;
+  left: 10%;
+  text-align: left;
+  font-size: 1.2em;
+}
+
+.carousel-caption h3 {
+  font-weight: 700;
+  font-size: 2.5em;
+  text-shadow: 1px 2px 2px rgb(26, 25, 25);
+}
+
+.carousel-caption .rating {
+  margin-right: 7px;
+  color: rgb(0, 202, 0);
+}
+
+.carousel-caption .certification {
+  margin-left: 7px;
+  font-size: 0.7em;
+  border: 0.5px solid white;
+  color: white;
+  padding: 2px 4px;
+  margin-bottom: 2px;
+}
+
+.carousel-caption .summary {
+  font-weight: 300;
+  width: 350px;
+  color: rgb(224, 223, 223);
+  text-shadow: 0 1px 1px rgb(27, 27, 27);
+}
+
+@media (max-width: 1000px) {
+  .Home .carousel img {
+    background-size: cover;
+    height: 100vh;
+    width: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .carousel-caption h3 {
+    font-weight: 700;
+    font-size: 1.6em;
+    text-shadow: 1px 2px 2px rgb(26, 25, 25);
+  }
+
+  .carousel-caption {
+    top: 20%;
+    left: 10%;
+    text-align: left;
+    font-size: 0.9em;
+  }
+}
+
+@media (max-width: 450px) {
+  .carousel-caption .summary {
+    max-width: 100%;
+    font-weight: 300;
+    width: 350px;
+    color: rgb(224, 223, 223);
+    text-shadow: 0 1px 1px rgb(27, 27, 27);
+  }
+
+  .carousel-caption {
+    top: 20%;
+    left: 10%;
+    text-align: left;
+    font-size: 0.7em;
+  }
+}

@@ -1,0 +1,158 @@
+.Search {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  /* background-color: rgb(27, 27, 27); */
+  /* z-index: -200; */
+}
+
+.Search .image-box {
+  position: inherit;
+}
+
+.Search .backgroundImage {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.Search .input-box {
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  right: 0;
+  bottom: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+  text-align: center;
+  z-index: 15;
+}
+
+.Search .input-box input {
+  width: 40%;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.781);
+  color: white;
+  font-weight: 300;
+  font-size: 40px;
+  padding: 20px 0;
+  outline: none;
+}
+
+.Search .fa.fa-search {
+  margin-left: 10px;
+  cursor: pointer;
+  font-size: 40px;
+  transition: 0.4s ease;
+  color: rgb(255, 255, 138);
+}
+
+.Search .fa.fa-search:hover {
+  transform: scale(1.4) rotate(30deg);
+  transition: 0.5s ease;
+  color: rgb(255, 115, 115);
+}
+
+.Search .fa.fa-angle-double-down {
+  position: relative;
+  left: 50%;
+  color: white;
+  font-size: 70px;
+  text-align: center;
+  margin: 0 auto;
+  display: inline-block;
+  margin-top: 37%;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  z-index: 15;
+}
+
+.Search .searchHint {
+  padding: 10px 20px;
+  color: white;
+  font-weight: 300;
+  font-size: 1.6em;
+}
+
+.Search .searchMovies {
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 10;
+  padding-top: 150px;
+  height: 600px;
+  background-color: rgb(27, 27, 27);
+}
+
+@media (max-width: 1000px) {
+  .Search .image-box {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 11;
+  }
+
+  .Search .backgroundImage {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: auto;
+  }
+
+  .Search .input-box input {
+    width: 55%;
+    height: 23px;
+    font-size: 30px;
+  }
+
+  .Search .fa.fa-search {
+    font-size: 32px;
+  }
+
+  .Search .fa.fa-angle-double-down {
+    margin-top: 50%;
+  }
+}
+
+@media (max-width: 700px) {
+  .Search .fa.fa-angle-double-down {
+    margin-top: 70%;
+  }
+
+  .Search .searchHint {
+    padding: 30px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .Search .input-box input {
+    width: 55%;
+    height: 20px;
+    font-size: 25px;
+  }
+  .Search .searchHint {
+    padding: 50px 20px;
+  }
+
+  .Search .fa.fa-search {
+    font-size: 27px;
+  }
+
+  .Search .fa.fa-angle-double-down {
+    margin-top: 100%;
+  }
+
+  .Search .searchMovies {
+    margin-top: 100px;
+  }
+}

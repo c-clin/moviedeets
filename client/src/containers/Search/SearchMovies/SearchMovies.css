@@ -1,0 +1,102 @@
+.SearchMovies #wrapper {
+  max-width: 100%;
+  padding: 50px 75px 50px 45px;
+  position: relative;
+}
+
+.SearchMovies .left-controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4%;
+  height: 280px;
+  z-index: 40;
+  opacity: 1;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  display: webkit box;
+  display: webkit flex;
+  display: moz box;
+  display: ms flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.SearchMovies .fa-chevron-left-extra {
+  align-self: center;
+  font-size: 1.5em;
+  position: relative;
+  bottom: 30px;
+  height: auto;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.SearchMovies .fa.fa-chevron-left-extra:hover {
+  transform: scale(1.3);
+  transition: 0.3s ease;
+}
+
+.SearchMovies .right-controls {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 4%;
+  height: 280px;
+  z-index: 40;
+  opacity: 1;
+  cursor: pointer;
+  text-align: center;
+  justify-content: center;
+  display: webkit box;
+  display: webkit flex;
+  display: moz box;
+  display: ms flexbox;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.SearchMovies .fa.fa-chevron-right-extra {
+  align-self: center;
+  font-size: 1.5em;
+  position: relative;
+  bottom: 30px;
+  height: auto;
+  color: white;
+  transition: 0.3s ease;
+}
+
+.SearchMovies .fa.fa-chevron-right-extra:hover {
+  transform: scale(1.3);
+  transition: 0.3s ease;
+}
+
+.SearchMovies .module-section {
+  position: absolute;
+  right: 0;
+  left: 0;
+  height: 200px;
+  max-width: 100%;
+  overflow: hidden;
+  /* overflow-x: scroll; */
+  border-left: 1px solid #fff;
+  border-right: 1px solid #fff;
+  border: none;
+}
+
+.SearchMovies #content {
+  position: relative;
+  width: 1900px;
+  transition: 1s transform;
+}
+
+.SearchMovies #content:hover {
+  transform: translate3d(-70px, 0, 0);
+}
+
+.SearchMovies .clearfix {
+  overflow: auto;
+  zoom: 1;
+  border: none;
+}
