@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 
 import './Navigation.css';
 
-const Navigation = () => {
+const Navigation = props => {
   return (
     <div className="Navigation">
       <nav>
@@ -19,7 +20,11 @@ const Navigation = () => {
             </span>
           </li>
           <li>
-            <a href="/auth/google">Login</a>
+            {!props.auth ? (
+              <a href="/auth/google">Login</a>
+            ) : (
+              <a href="#">Logout</a>
+            )}
             <NavLink to="/search" exact>
               Search
             </NavLink>
@@ -33,4 +38,10 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+const mapStateToProps = state => {
+  return {
+    auth: state.authUser.auth
+  };
+};
+
+export default connect(mapStateToProps)(Navigation);
