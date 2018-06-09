@@ -1,0 +1,16 @@
+.MovieList {
+  margin-top: 10%;
+}
+
+.MovieList .container {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px;
+}
+
+.MovieList .container .poster {
+  flex-basis: 0;
+}
+
+.MovieList .container .description {
+}

@@ -12,6 +12,7 @@ import registerServiceWorker from './registerServiceWorker';
 import fetchMoviesReducer from './store/reducers/fetchMovies';
 import loadMoviesReducer from './store/reducers/loadMovies';
 import authUserReducer from './store/reducers/authUser';
+import movieListReducer from './store/reducers/movieList';
 
 import axios from 'axios';
 window.axios = axios;
@@ -22,7 +23,8 @@ const composedEnhancers =
 const rootReducer = combineReducers({
   loadMovies: loadMoviesReducer,
   fetchMovies: fetchMoviesReducer,
-  authUser: authUserReducer
+  authUser: authUserReducer,
+  movieList: movieListReducer
 });
 
 const store = createStore(

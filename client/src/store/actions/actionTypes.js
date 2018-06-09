@@ -13,3 +13,4 @@ export const FETCH_MOVIES_FAILED = 'FETCH_MOVIES_FAILED';
 export const TURN_OFF_MODAL = 'TURN_OFF_MODAL';
 
 export const FETCH_USER = 'FETCH_USER';
+export const FETCH_LIST = 'FETCH_LIST';

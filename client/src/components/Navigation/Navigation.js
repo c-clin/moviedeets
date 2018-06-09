@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Nav, Navbar, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown, MenuItem } from 'react-bootstrap';
 
 import './Navigation.css';
 
@@ -37,7 +37,7 @@ const Navigation = props => {
             {props.auth ? (
               <NavDropdown eventKey={3} title="Manage" id="basic-nav-dropdown">
                 <li role="presentation" class="">
-                  <NavLink to="/my-list">My List</NavLink>
+                  <NavLink to="/api/my-list">My List</NavLink>
                 </li>
                 <MenuItem divider />
                 <MenuItem eventKey={3.3} href="/api/logout">

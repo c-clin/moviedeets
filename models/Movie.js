@@ -5,6 +5,7 @@ const movieSchema = new Schema({
   title: String,
   poster: String,
   year: Number,
+  _user: { type: Schema.Types.ObjectId, ref: 'User' },
   date: Date
 });
 
