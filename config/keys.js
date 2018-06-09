@@ -1,7 +1,8 @@
-module.exports = {
-  googleClientID:
-    '822356003327-um9sblnhbl37s2amdee3vk6vl9bnvo94.apps.googleusercontent.com',
-  googleClientSecret: 'wLN0zIaAC-ORdHgYZz4CzOdx',
-  mongoURI: 'mongodb://cat:catherine123@ds153700.mlab.com:53700/moviedeets',
-  cookieKey: 'lkjhgfdfghjkjhgfdfghjkiuytrfghytresdghfjnmkjhjkjh'
-};
+// figure out which credentials to return
+if (process.env.NODE_ENV === 'production') {
+  // production keys
+  module.exports = require('./prod');
+} else {
+  // development keys
+  module.exports = require('./dev');
+}
