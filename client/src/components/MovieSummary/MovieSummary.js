@@ -13,6 +13,8 @@ const MovieSummary = props => {
     ? props.releaseDate.toString().substr(0, 4)
     : null;
 
+  console.log(props);
+
   return (
     <div className="MovieSummary">
       <div className="container-box">
@@ -55,7 +57,7 @@ const MovieSummary = props => {
             </a>
             <button
               className="add-movie"
-              onClick={() => props.saveMovie(props.title, props.poster, year)}
+              onClick={() => props.saveMovie(props)}
             >
               <i className="fa fa-plus" aria-hidden="true" />
               &nbsp; &nbsp; MY LIST

@@ -4,7 +4,9 @@ const Schema = mongoose.Schema;
 const movieSchema = new Schema({
   title: String,
   poster: String,
-  year: Number,
+  releaseDate: String,
+  cast: Array,
+  summary: String,
   _user: { type: Schema.Types.ObjectId, ref: 'User' },
   date: Date
 });

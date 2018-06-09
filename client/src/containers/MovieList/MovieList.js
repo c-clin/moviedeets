@@ -12,6 +12,10 @@ class MovieList extends Component {
 
   renderContent = () => {
     return this.props.movieList.map(movieItem => {
+      let year = movieItem.releaseDate
+        ? movieItem.releaseDate.toString().substr(0, 4)
+        : null;
+
       return (
         <div className="container" key={movieItem._id}>
           <div className="poster">
@@ -19,8 +23,10 @@ class MovieList extends Component {
           </div>
           <div className="description">
             <h4>{movieItem.title}</h4>
-            <p>{movieItem.year}</p>
+            <p>{year}</p>
             <p>Date saved: {new Date(movieItem.date).toLocaleDateString()}</p>
+            <p>{movieItem.summary}</p>
+            <p>Cast: {movieItem.cast}</p>
           </div>
         </div>
       );

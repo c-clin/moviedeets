@@ -9,12 +9,14 @@ module.exports = app => {
   });
 
   app.post('/api/add-movie', requireLogin, (req, res) => {
-    const { title, poster, year } = req.body;
+    const { title, poster, releaseDate, cast, summary } = req.body;
 
     const movie = new Movie({
       title,
       poster,
-      year,
+      releaseDate,
+      cast,
+      summary,
       _user: req.user.id,
       date: Date.now()
     });

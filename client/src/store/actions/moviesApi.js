@@ -1,11 +1,16 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-export const saveMovie = (title, poster, year) => {
+export const saveMovie = props => {
+  console.log(props);
+
   let obj = {
-    title,
-    poster,
-    year
+    title: props.title,
+    poster: props.poster,
+    releaseDate: props.releaseDate,
+    // certification: props.certification,
+    cast: props.castNames,
+    summary: props.summary
   };
   return dispatch => {
     axios
