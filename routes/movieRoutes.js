@@ -7,6 +7,8 @@ module.exports = app => {
   app.post('/api/add-movie', requireLogin, (req, res) => {
     const { title, poster, year } = req.body;
 
+    console.log('req body: ', title, poster, year);
+
     const movie = new Movie({
       title,
       poster,
@@ -16,7 +18,7 @@ module.exports = app => {
 
     try {
       movie.save();
-      res.send(movie);
+      res.send();
     } catch (err) {
       res.status(422).send(err);
     }

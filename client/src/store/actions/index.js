@@ -8,3 +8,5 @@ export {
 export { onFetchMovie, onFetchMovieSummary } from './fetchMovies';
 
 export { fetchUser } from './authUser';
+
+export { saveMovie } from './moviesApi';

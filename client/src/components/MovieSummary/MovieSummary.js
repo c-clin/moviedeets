@@ -1,5 +1,6 @@
 import React from 'react';
-
+import { connect } from 'react-redux';
+import * as actions from '../../store/actions';
 import './MovieSummary.css';
 
 const MovieSummary = props => {
@@ -52,7 +53,10 @@ const MovieSummary = props => {
               <i className="fa fa-video-camera" aria-hidden="true" />
               &nbsp; &nbsp; TRAILER
             </a>
-            <button className="add-movie">
+            <button
+              className="add-movie"
+              onClick={() => props.saveMovie(props.title, props.poster, year)}
+            >
               <i className="fa fa-plus" aria-hidden="true" />
               &nbsp; &nbsp; MY LIST
             </button>
@@ -79,4 +83,7 @@ const MovieSummary = props => {
   );
 };
 
-export default MovieSummary;
+export default connect(
+  null,
+  actions
+)(MovieSummary);

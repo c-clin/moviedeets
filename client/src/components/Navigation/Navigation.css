@@ -1,4 +1,90 @@
-.Navigation {
+nav.navbar.navbar-default {
+  background-color: transparent;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 900;
+  border: none;
+  font-family: 'Lato', sans-serif;
+  box-sizing: border-box;
+}
+
+nav .container {
+  width: 100%;
+}
+
+.navbar-default .navbar-brand {
+  color: #39a1d1da;
+  transition: 0.3s ease;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: #3490bbda;
+  text-shadow: 1px 2px 2px rgb(19, 19, 19);
+  transition: 0.3s ease;
+}
+
+nav a.navbar-brand {
+  font-size: 2.2em;
+  color: #46c4ffb2;
+  font-family: 'Pacifico', cursive;
+}
+
+nav ul.nav.navbar-nav.navbar-right {
+  margin-top: 10px;
+}
+
+nav ul.nav.navbar-nav.navbar-right li {
+  font-size: 1.4em;
+}
+
+nav ul.nav.navbar-nav.navbar-right li a {
+  display: block;
+  text-decoration: none;
+  padding: 1px 1px 0 1px;
+  margin: 0 10px;
+  color: #46c4ffb2;
+  border-bottom: 2px solid transparent;
+  text-shadow: 1px 1px 2px rgb(37, 37, 37);
+  transition: 0.3s ease-in-out;
+  font-weight: 300;
+  padding: 5px 10px;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul.nav.navbar-nav.navbar-right li a:hover {
+  color: #ffd436ab;
+  border-bottom: 2px solid #ffd436ab;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul.nav.navbar-nav.navbar-right li a.login-btn {
+  margin-bottom: 0;
+  padding: 5px 13px;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul.nav.navbar-nav.navbar-right li a.login-btn:hover {
+  background-color: rgba(128, 128, 128, 0.5);
+  color: rgb(17, 202, 226);
+  border-bottom: 2px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+nav ul.dropdown-menu {
+  background-color: transparent;
+}
+nav ul.dropdown-menu a:hover {
+  border-bottom: 2px solid transparent;
+  background-color: rgba(87, 87, 87, 0.7);
+}
+
+nav a#basic-nav-dropdown {
+  background-color: transparent;
+}
+
+/* .Navigation {
   display: block;
   text-align: right;
   align-items: center;
@@ -18,6 +104,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  overflow: hidden;
 }
 
 .Navigation #link-title {
@@ -31,7 +118,8 @@
   border-bottom: 2px solid transparent;
 }
 
-.Navigation a {
+.Navigation li a {
+  display: block;
   text-decoration: none;
   padding: 1px 1px 0 1px;
   margin: 0 10px;
@@ -47,12 +135,17 @@
 }
 
 .Navigation li {
+  float: left;
   margin: 10px 0;
   font-size: 20px;
+}
+
+.Navigation .right {
+  float: right;
 }
 
 @media (max-width: 450px) {
   .Navigation li {
     font-size: 0.9em;
   }
-}
+} */
