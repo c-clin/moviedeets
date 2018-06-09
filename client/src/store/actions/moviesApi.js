@@ -1,16 +1,23 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-// export const saveMovie = () => {
-//   return {
-
-//   }
-// }
-
 export const fetchList = data => {
   return {
     type: actionTypes.FETCH_LIST,
     movieList: data
+  };
+};
+
+export const onDeleteMovie = id => {
+  return dispatch => {
+    axios
+      .delete(`/api/delete/${id}`)
+      .then(res => {
+        console.log('movie deleted');
+      })
+      .catch(err => {
+        console.log(err);
+      });
   };
 };
 
@@ -21,15 +28,12 @@ export const onSaveMovie = props => {
     title: props.title,
     poster: props.poster,
     releaseDate: props.releaseDate,
-    // certification: props.certification,
-    cast: props.castNames,
     summary: props.summary
   };
   return dispatch => {
     axios
       .post('/api/add-movie', obj)
       .then(res => {
-        console.log('success :', res);
         dispatch({ type: actionTypes.MOVIE_SAVED });
       })
       .catch(err => console.log(err));

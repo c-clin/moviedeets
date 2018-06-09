@@ -7,7 +7,7 @@ import Navigation from './components/Navigation/Navigation';
 import Home from './containers/Home/Home';
 import Search from './containers/Search/Search';
 import Discover from './containers/Discover/Discover';
-import MovieList from './containers/MovieList/MovieList';
+import UsersMovieList from './containers/UsersMovieList/UsersMovieList';
 
 class App extends Component {
   componentDidMount = () => {
@@ -21,7 +21,7 @@ class App extends Component {
         <Switch>
           <Route path="/search" component={Search} />
           <Route path="/discover" component={Discover} />
-          <Route path="/api/my-list" component={MovieList} />
+          <Route path="/api/my-list" component={UsersMovieList} />
           <Route path="/" exact component={Home} />
           <Redirect to={'/'} />
         </Switch>

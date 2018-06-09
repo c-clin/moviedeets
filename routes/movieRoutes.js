@@ -1,21 +1,35 @@
 const mongoose = require('mongoose');
+const ObjectID = require('mongodb').ObjectID;
 const requireLogin = require('../middlewares/requireLogin');
 
 const Movie = mongoose.model('movie');
 
 module.exports = app => {
+  // load movie list
   app.get('/api/my-list', requireLogin, (req, res) => {
     Movie.find({ _user: req.user.id }).then(movie => res.send(movie));
   });
 
+  // delete a specific movie off list
+  app.delete('/api/delete/:id', requireLogin, (req, res) => {
+    let id = ObjectID(req.params.id);
+    Movie.deleteOne({ _id: id }, (error, result) => {
+      if (error) {
+        console.log(error);
+      }
+      res.send('user deleted');
+    });
+
+    Movie.find({ id: req.id }).then(movie => {});
+  });
+
   app.post('/api/add-movie', requireLogin, (req, res) => {
-    const { title, poster, releaseDate, cast, summary } = req.body;
+    const { title, poster, releaseDate, summary } = req.body;
 
     const movie = new Movie({
       title,
       poster,
       releaseDate,
-      cast,
       summary,
       _user: req.user.id,
       date: Date.now()
