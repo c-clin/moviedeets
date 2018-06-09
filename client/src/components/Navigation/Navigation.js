@@ -23,7 +23,7 @@ const Navigation = props => {
             {!props.auth ? (
               <a href="/auth/google">Login</a>
             ) : (
-              <a href="#">Logout</a>
+              <a href="/api/logout">Logout</a>
             )}
             <NavLink to="/search" exact>
               Search
