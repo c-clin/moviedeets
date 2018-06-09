@@ -19,6 +19,9 @@ const Navigation = () => {
             </span>
           </li>
           <li>
+            <a href="/auth/google" exact>
+              Login
+            </a>
             <NavLink to="/search" exact>
               Search
             </NavLink>
