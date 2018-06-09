@@ -11,13 +11,15 @@ import '../node_modules/font-awesome/css/font-awesome.min.css';
 import registerServiceWorker from './registerServiceWorker';
 import fetchMoviesReducer from './store/reducers/fetchMovies';
 import loadMoviesReducer from './store/reducers/loadMovies';
+import authUserReducer from './store/reducers/authUser';
 
 const composedEnhancers =
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   loadMovies: loadMoviesReducer,
-  fetchMovies: fetchMoviesReducer
+  fetchMovies: fetchMoviesReducer,
+  authUser: authUserReducer
 });
 
 const store = createStore(

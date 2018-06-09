@@ -6,3 +6,5 @@ export {
 } from './loadMovies';
 
 export { onFetchMovie, onFetchMovieSummary } from './fetchMovies';
+
+export { fetchUser } from './authUser';
