@@ -1,7 +1,20 @@
 import * as actionTypes from './actionTypes';
 import axios from 'axios';
 
-export const saveMovie = props => {
+// export const saveMovie = () => {
+//   return {
+
+//   }
+// }
+
+export const fetchList = data => {
+  return {
+    type: actionTypes.FETCH_LIST,
+    movieList: data
+  };
+};
+
+export const onSaveMovie = props => {
   console.log(props);
 
   let obj = {
@@ -17,15 +30,9 @@ export const saveMovie = props => {
       .post('/api/add-movie', obj)
       .then(res => {
         console.log('success :', res);
+        dispatch({ type: actionTypes.MOVIE_SAVED });
       })
       .catch(err => console.log(err));
-  };
-};
-
-export const fetchList = data => {
-  return {
-    type: actionTypes.FETCH_LIST,
-    movieList: data
   };
 };
 

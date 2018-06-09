@@ -9,4 +9,4 @@ export { onFetchMovie, onFetchMovieSummary } from './fetchMovies';
 
 export { fetchUser } from './authUser';
 
-export { saveMovie, onFetchList } from './moviesApi';
+export { onSaveMovie, onFetchList } from './moviesApi';

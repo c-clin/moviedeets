@@ -14,3 +14,5 @@ export const TURN_OFF_MODAL = 'TURN_OFF_MODAL';
 
 export const FETCH_USER = 'FETCH_USER';
 export const FETCH_LIST = 'FETCH_LIST';
+export const MOVIE_SAVED = 'MOVIE_SAVED';
+export const MOVIE_UNSAVED = 'MOVIE_UNSAVED';

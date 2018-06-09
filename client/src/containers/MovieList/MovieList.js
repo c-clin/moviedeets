@@ -11,7 +11,7 @@ class MovieList extends Component {
   };
 
   renderContent = () => {
-    return this.props.movieList.map(movieItem => {
+    return this.props.movieList.reverse().map(movieItem => {
       let year = movieItem.releaseDate
         ? movieItem.releaseDate.toString().substr(0, 4)
         : null;

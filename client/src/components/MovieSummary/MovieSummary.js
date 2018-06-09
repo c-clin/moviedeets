@@ -13,7 +13,7 @@ const MovieSummary = props => {
     ? props.releaseDate.toString().substr(0, 4)
     : null;
 
-  console.log(props);
+  console.log(props.movieSaved);
 
   return (
     <div className="MovieSummary">
@@ -57,9 +57,13 @@ const MovieSummary = props => {
             </a>
             <button
               className="add-movie"
-              onClick={() => props.saveMovie(props)}
+              onClick={() => props.onSaveMovie(props)}
             >
-              <i className="fa fa-plus" aria-hidden="true" />
+              {props.movieSaved ? (
+                <i className="fa fa-check" aria-hidden="true" />
+              ) : (
+                <i className="fa fa-plus" aria-hidden="true" />
+              )}
               &nbsp; &nbsp; MY LIST
             </button>
           </div>
@@ -85,7 +89,13 @@ const MovieSummary = props => {
   );
 };
 
+const mapStateToProps = state => {
+  return {
+    movieSaved: state.movieList.movieSaved
+  };
+};
+
 export default connect(
-  null,
+  mapStateToProps,
   actions
 )(MovieSummary);
