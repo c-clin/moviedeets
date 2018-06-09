@@ -5,6 +5,8 @@ import { connect } from 'react-redux';
 import './Navigation.css';
 
 const Navigation = props => {
+  const { location } = props;
+  console.log(location);
   return (
     <div className="Navigation">
       <nav>
@@ -25,9 +27,7 @@ const Navigation = props => {
             ) : (
               <a href="/api/logout">Logout</a>
             )}
-            <NavLink to="/search" exact>
-              Search
-            </NavLink>
+            <NavLink to="/search">Search</NavLink>
             <NavLink to="/discover" exact>
               Discover
             </NavLink>

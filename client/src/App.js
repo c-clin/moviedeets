@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Switch, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import * as actions from './store/actions/index';
 
@@ -20,7 +20,7 @@ class App extends Component {
         <Switch>
           <Route path="/search" component={Search} />
           <Route path="/discover" component={Discover} />
-          <Route path="/" component={Home} />
+          <Route path="/" exact component={Home} />
           <Redirect to={'/'} />
         </Switch>
       </div>
@@ -28,7 +28,9 @@ class App extends Component {
   }
 }
 
-export default connect(
-  null,
-  actions
-)(App);
+export default withRouter(
+  connect(
+    null,
+    actions
+  )(App)
+);
