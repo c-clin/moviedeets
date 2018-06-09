@@ -4,7 +4,6 @@ import './MovieSummary.css';
 
 const MovieSummary = props => {
   let casts = props.castNames.toString().replace(/[,]/g, ', ');
-  // let genres = props.genres.toString().replace(/[,]/g, ', ');
 
   let thumbsUp = <i className="fa fa-thumbs-o-up" />;
   let thumbsDown = <i className="fa fa-thumbs-o-down" />;
@@ -33,9 +32,7 @@ const MovieSummary = props => {
           <span className="date">{year}</span>
           <span
             className="certification"
-            style={{
-              display: props.certification ? 'inline-block' : 'none'
-            }}
+            style={{ display: props.certification ? 'inline-block' : 'none' }}
           >
             {props.certification}
           </span>
@@ -44,10 +41,27 @@ const MovieSummary = props => {
             &nbsp;
             {props.runtime} minutes
           </span>
+          <div className="links">
+            <a
+              className="goto-trailer"
+              href={`https://www.youtube.com/results?search_query=${
+                props.title
+              }`}
+              target="_blank"
+            >
+              <i className="fa fa-video-camera" aria-hidden="true" />
+              &nbsp; &nbsp; TRAILER
+            </a>
+            <button className="add-movie">
+              <i className="fa fa-plus" aria-hidden="true" />
+              &nbsp; &nbsp; MY LIST
+            </button>
+          </div>
+
           <p className="summary">{props.summary}</p>
           <p>
             {props.url ? (
-              <a href={props.url} target="_blank">
+              <a href={props.url} target="_blank" className="website">
                 <i className="fa fa-link" aria-hidden="true" /> &nbsp; Movie
                 Website
               </a>

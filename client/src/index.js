@@ -13,6 +13,9 @@ import fetchMoviesReducer from './store/reducers/fetchMovies';
 import loadMoviesReducer from './store/reducers/loadMovies';
 import authUserReducer from './store/reducers/authUser';
 
+import axios from 'axios';
+window.axios = axios;
+
 const composedEnhancers =
   window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 

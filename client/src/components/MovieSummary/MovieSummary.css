@@ -26,14 +26,50 @@
   color: rgb(197, 197, 197);
 }
 
-.MovieSummary .description a {
+.MovieSummary .goto-trailer {
+  text-decoration: none;
+  background-color: rgb(219, 25, 25);
+  color: white;
+  padding: 8px 14px;
+  font-weight: 300;
+  font-size: 0.9em;
+  transition: 0.3s ease-in-out;
+}
+.MovieSummary .goto-trailer:hover {
+  background-color: rgb(255, 0, 0);
+  transition: 0.3s ease-in-out;
+}
+
+.MovieSummary .add-movie {
+  margin-left: 6px;
+  display: inline-block;
+  background-color: transparent;
+  padding: 6px 12px;
+  font-weight: 300;
+  margin-top: 5px;
+  transition: 0.3s ease-in-out;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.MovieSummary .add-movie:hover {
+  background-color: rgba(104, 104, 104, 0.432);
+  transition: 0.3s ease-in-out;
+}
+
+.MovieSummary .add-movie:active,
+.MovieSummary .add-movie:focus {
+  outline: none;
+}
+
+.MovieSummary .description .website {
   text-decoration: none;
   font-weight: 300;
   color: #9cced4;
   border-bottom: 1px solid transparent;
 }
 
-.MovieSummary .description a:hover {
+.MovieSummary .description .website:hover {
   border-bottom: 1px solid #9cced4;
 }
 

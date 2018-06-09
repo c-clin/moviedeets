@@ -2,9 +2,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cookieSession = require('cookie-session');
 const passport = require('passport');
+const bodyParser = require('body-parser');
 const keys = require('./config/keys');
 
 require('./models/User');
+require('./models/Movie');
 require('./services/passport');
 
 mongoose
@@ -14,6 +16,8 @@ mongoose
 
 // app is the underline running express server
 const app = express();
+
+app.use(bodyParser.json());
 
 // tell express to use cookies
 app.use(
@@ -29,6 +33,7 @@ app.use(passport.session());
 
 // call the authRoutes file with app
 require('./routes/authRoutes')(app);
+require('./routes/movieRoutes')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
