@@ -11,6 +11,17 @@ export default class componentName extends Component {
   render() {
     const homePageMovies = [
       {
+        title: 'La La Land',
+        rating: '93%',
+        certification: 'PG-13',
+        year: 2016,
+        genre: 'Comedy, Drama, Musical, Romance',
+        cast: 'Ryan Gosling, Emma Stone, Rosemarie DeWitt',
+        summary:
+          'While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.',
+        poster: poster3
+      },
+      {
         title: 'Black Panther',
         rating: '98%',
         certification: 'PG-13',
@@ -31,17 +42,6 @@ export default class componentName extends Component {
         summary:
           'A woman rebels against a tyrannical ruler in postapocalyptic Australia in search for her home-land with the help of a group of female prisoners, a psychotic worshipper, and a drifter named Max.',
         poster: poster2
-      },
-      {
-        title: 'La La Land',
-        rating: '93%',
-        certification: 'PG-13',
-        year: 2016,
-        genre: 'Comedy, Drama, Musical, Romance',
-        cast: 'Ryan Gosling, Emma Stone, Rosemarie DeWitt',
-        summary:
-          'While navigating their careers in Los Angeles, a pianist and an actress fall in love while attempting to reconcile their aspirations for the future.',
-        poster: poster3
       }
     ];
 
