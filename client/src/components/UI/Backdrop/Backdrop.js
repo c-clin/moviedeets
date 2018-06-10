@@ -8,7 +8,7 @@ const backdrop = props =>
     <div
       className="Backdrop"
       onClick={() => {
-        props.modalOff(), props.unSaveMovie();
+        props.modalOff() && props.unSaveMovie();
       }}
     />
   ) : null;

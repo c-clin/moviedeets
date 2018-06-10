@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { Nav, Navbar, NavDropdown, MenuItem } from 'react-bootstrap';
+import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 
 import './Navigation.css';
 
@@ -17,12 +17,12 @@ const Navigation = props => {
       </Navbar.Header>
       <Navbar.Collapse>
         <Nav pullRight>
-          <li role="presentation">
+          <li role="presentation" className="nav-links">
             <NavLink to="/discover" exact>
               Discover
             </NavLink>
           </li>
-          <li role="presentation">
+          <li role="presentation" className="nav-links">
             <NavLink to="/search">Search</NavLink>
           </li>
           {!props.auth ? (
@@ -38,10 +38,12 @@ const Navigation = props => {
                 <li role="presentation" class="">
                   <NavLink to="/api/my-list">My List</NavLink>
                 </li>
-                <MenuItem divider />
-                <MenuItem eventKey={3.3} href="/api/logout">
-                  Logout
-                </MenuItem>
+                <li role="separator" className="divider" />
+                <li role="presentation">
+                  <a href="/api/logout" role="menuitem">
+                    Logout
+                  </a>
+                </li>
               </NavDropdown>
             ) : null}
           </Nav>
