@@ -13,8 +13,6 @@ const MovieSummary = props => {
     ? props.releaseDate.toString().substr(0, 4)
     : null;
 
-  console.log(props.movieSaved);
-
   return (
     <div className="MovieSummary">
       <div className="container-box">

@@ -7,12 +7,9 @@ import './UsersMovieList.css';
 class UsersMovieList extends Component {
   componentDidMount = () => {
     this.props.loadMovieList();
-    console.log(this.props.movieList.movieList);
   };
 
   deleteMovie = id => {
-    console.log('delete clicked');
-    console.log(id);
     this.props.deleteMovie(id);
     this.props.loadMovieList();
   };

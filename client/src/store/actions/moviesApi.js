@@ -22,8 +22,6 @@ export const onDeleteMovie = id => {
 };
 
 export const onSaveMovie = props => {
-  console.log(props);
-
   let obj = {
     title: props.title,
     poster: props.poster,
@@ -36,7 +34,7 @@ export const onSaveMovie = props => {
       .then(res => {
         dispatch({ type: actionTypes.MOVIE_SAVED });
       })
-      .catch(err => console.log(err));
+      .catch(err => alert(err));
   };
 };
 
@@ -45,7 +43,6 @@ export const onFetchList = () => {
     axios
       .get('/api/my-list')
       .then(res => {
-        console.log(res.data);
         dispatch(fetchList(res.data));
       })
       .catch(err => console.log(err));

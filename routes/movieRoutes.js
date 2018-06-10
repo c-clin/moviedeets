@@ -19,27 +19,35 @@ module.exports = app => {
       }
       res.send('user deleted');
     });
-
-    Movie.find({ id: req.id }).then(movie => {});
   });
 
-  app.post('/api/add-movie', requireLogin, (req, res) => {
+  // saving a movie to list
+  app.post('/api/add-movie', requireLogin, (req, res, next) => {
     const { title, poster, releaseDate, summary } = req.body;
+    console.log(title);
+    Movie.findOne({ title: title }).then(movie => {
+      if (movie) {
+        console.log('duplicate movie');
+        return res
+          .status(400)
+          .json({ error: `${title} is already in your list!` });
+      } else {
+        const movie = new Movie({
+          title,
+          poster,
+          releaseDate,
+          summary,
+          _user: req.user.id,
+          date: Date.now()
+        });
 
-    const movie = new Movie({
-      title,
-      poster,
-      releaseDate,
-      summary,
-      _user: req.user.id,
-      date: Date.now()
+        try {
+          movie.save();
+          res.send();
+        } catch (err) {
+          res.status(422).send(err);
+        }
+      }
     });
-
-    try {
-      movie.save();
-      res.send();
-    } catch (err) {
-      res.status(422).send(err);
-    }
   });
 };
