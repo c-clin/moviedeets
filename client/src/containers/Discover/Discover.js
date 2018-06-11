@@ -13,12 +13,11 @@ class Discover extends Component {
   render() {
     return (
       <div className="Discover">
-        <div className="container">
-          <img src={coverPhoto} alt="cover phto" />
-          <p className="subheading">
-            Discover the most popular movies <em>now</em>.
-          </p>
-        </div>
+        {/* <img src={coverPhoto} alt="cover phto" /> */}
+        <p className="subheading">
+          Discover the most popular movies <em>now</em>.
+        </p>
+
         <div className="movieLists">
           <PopularMovies />
           <TopRatedMovies />

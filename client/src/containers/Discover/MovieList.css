@@ -1,5 +1,6 @@
 .MovieList {
   padding-bottom: 10%;
+  z-index: 100;
 }
 
 .MovieList h3 {
