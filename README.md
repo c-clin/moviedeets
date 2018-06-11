@@ -2,6 +2,8 @@
 
 This is an app that allows users to search and discover movies. Users must log in with Google to create their own list of movies. The style is inspired by Netflix and the data is from the TMDb Api.
 
+- Issue: If the login button refreshes the page, please clear your browser cache data and it will work.
+
 ### Tech Stack
 
 - Express
