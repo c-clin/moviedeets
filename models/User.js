@@ -5,5 +5,4 @@ const userSchema = new Schema({
   googleId: String
 });
 
-// add the model to mongoose: name of collection, schema
 mongoose.model('user', userSchema);
