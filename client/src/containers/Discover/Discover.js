@@ -5,8 +5,6 @@ import NowPlayingMovies from './NowPlayingMovies/NowPlayingMovies';
 import TopRatedMovies from './TopRatedMovies/TopRatedMovies';
 import UpcomingMovies from './UpComingMovies/UpComingMovies';
 
-import coverPhoto from '../../assets/images/pirates.jpg';
-
 import './Discover.css';
 
 class Discover extends Component {

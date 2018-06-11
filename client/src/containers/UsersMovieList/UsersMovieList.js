@@ -16,12 +16,8 @@ class UsersMovieList extends Component {
 
   renderContent = () => {
     return this.props.movieList.reverse().map(movieItem => {
-      let year = movieItem.releaseDate
-        ? movieItem.releaseDate.toString().substr(0, 4)
-        : null;
-
       return (
-        <div className="container" key={movieItem._id}>
+        <div className="single-container" key={movieItem._id}>
           <div className="description">
             <img src={movieItem.poster} alt={movieItem.title} />
 
@@ -39,7 +35,11 @@ class UsersMovieList extends Component {
   };
 
   render() {
-    return <div className="UsersMovieList">{this.renderContent()}</div>;
+    return (
+      <div className="UsersMovieList">
+        <div className="container">{this.renderContent()}</div>
+      </div>
+    );
   }
 }
 
