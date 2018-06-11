@@ -34,7 +34,7 @@ export const onSaveMovie = props => {
       .then(res => {
         dispatch({ type: actionTypes.MOVIE_SAVED });
       })
-      .catch(err => alert(err));
+      .catch(error => alert(error.response.data.error));
   };
 };
 

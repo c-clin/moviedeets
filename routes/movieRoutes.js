@@ -27,10 +27,9 @@ module.exports = app => {
     console.log(title);
     Movie.findOne({ title: title }).then(movie => {
       if (movie) {
-        console.log('duplicate movie');
         return res
           .status(400)
-          .json({ error: `${title} is already in your list!` });
+          .send({ error: `Error: "${title}" is already in your list!` });
       } else {
         const movie = new Movie({
           title,

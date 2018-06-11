@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 // tell express to use cookies
 app.use(
   cookieSession({
-    maxAge: 24 * 60 * 60 * 1000, // cookies expire in 30 days
+    maxAge: 24 * 60 * 60 * 1000, // cookies expire in 1 day
     keys: [keys.cookieKey]
   })
 );
