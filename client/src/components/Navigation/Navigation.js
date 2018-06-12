@@ -36,7 +36,7 @@ const Navigation = props => {
             {props.auth ? (
               <NavDropdown eventKey={3} title="Manage" id="basic-nav-dropdown">
                 <li role="presentation" class="">
-                  <NavLink to="/api/my-list">My List</NavLink>
+                  <NavLink to="/my-list">My List</NavLink>
                 </li>
                 <li role="separator" className="divider" />
                 <li role="presentation">

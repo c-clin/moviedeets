@@ -21,9 +21,9 @@ class App extends Component {
         <Switch>
           <Route path="/search" component={Search} />
           <Route path="/discover" component={Discover} />
-          <Route path="/api/my-list" component={UsersMovieList} />
+          <Route path="/my-list" component={UsersMovieList} />
           <Route path="/" exact component={Home} />
-          <Redirect to={'/'} />
+          <Redirect to="/" />
         </Switch>
       </div>
     );
