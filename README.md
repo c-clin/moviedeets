@@ -14,7 +14,7 @@ This is an app that allows users to search and discover movies. Users must log i
 - Redux
 - Mongoose
 
-### Website Link: [https://mighty-meadow-46049.herokuapp.com/]
+### Website Link: [https://moviedeets.herokuapp.com/ ]
 
 #### CSS Credit:
 
