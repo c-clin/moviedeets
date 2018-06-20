@@ -6,7 +6,6 @@ import { Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import './Navigation.css';
 
 const Navigation = props => {
-  console.log(props.auth);
   return (
     <Navbar collapseOnSelect>
       <Navbar.Header>

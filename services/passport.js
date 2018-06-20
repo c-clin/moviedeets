@@ -32,7 +32,7 @@ passport.use(
       User.findOne({ googleId: profile.id }).then(user => {
         if (user) {
           // user exists
-          done(null, user);
+          return done(null, user);
         } else {
           // user doesn't exist, create a new User instance
           new User({ googleId: profile.id })
