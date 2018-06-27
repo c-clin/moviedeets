@@ -23,8 +23,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback',
-      proxy: true
+      callbackURL: 'https://moviedeets.herokuapp.com/auth/google/callback'
+      // proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
       // callback automatically called after user enters the URL

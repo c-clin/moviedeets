@@ -12,7 +12,9 @@ module.exports = app => {
   // this route comes with the google access token code so passport can handle the login
   app.get(
     '/auth/google/callback',
-    passport.authenticate('google'),
+    passport.authenticate('google', {
+      failureRedirect: '/login'
+    }),
     (req, res) => {
       res.redirect('/');
     }
