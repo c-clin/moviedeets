@@ -4,6 +4,7 @@ import * as actions from '../../store/actions/index';
 import $ from 'jquery';
 
 import SearchMovies from './SearchMovies/SearchMovies';
+import backgroundImg from '../../assets/images/ironman.jpg';
 import './Search.css';
 
 class Search extends Component {
@@ -54,6 +55,13 @@ class Search extends Component {
           overflow: this.state.searchClicked ? 'scroll' : 'hidden'
         }}
       >
+        <div className="image-box">
+          <img
+            src={backgroundImg}
+            alt="background"
+            className="backgroundImage"
+          />
+        </div>
         <div className="input-box">
           <input
             type="text"

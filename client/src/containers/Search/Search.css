@@ -5,11 +5,12 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background: url(../../assets//images/ironman.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
   /* background-color: rgb(27, 27, 27); */
   /* z-index: -200; */
+}
+
+.Search .image-box {
+  position: inherit;
 }
 
 .Search .backgroundImage {
