@@ -14,17 +14,24 @@ nav .container {
   width: 100%;
 }
 
-.navbar-default .navbar-brand {
+.navbar-default .navbar-brand,
+.navbar-default .navbar-brand:focus {
   font-size: 2.2em;
   color: #46c4ffb2;
   font-family: 'Pacifico', cursive;
   color: #39a1d1da;
   transition: 0.3s ease;
+  outline: none;
 }
 .navbar-default .navbar-brand:hover {
   color: #3490bbda;
   text-shadow: 1px 2px 2px rgb(19, 19, 19);
   transition: 0.3s ease;
+}
+
+.navbar-default .navbar-toggle:focus,
+.navbar-default .navbar-toggle:hover {
+  background-color: transparent;
 }
 
 nav ul.nav.navbar-nav.navbar-right {
@@ -93,7 +100,8 @@ nav ul.nav.navbar-nav.navbar-right li a.login-btn:hover {
 nav ul.dropdown-menu {
   background-color: transparent;
 }
-nav ul.dropdown-menu a:hover {
+nav ul.dropdown-menu a:hover,
+nav ul.dropdown-menu a:focus {
   border-bottom: 2px solid transparent;
   background-color: rgba(172, 160, 140, 0.5);
 }
