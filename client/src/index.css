@@ -7,3 +7,12 @@ body {
 * {
   box-sizing: border-box;
 }
+
+.App {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s;
+}

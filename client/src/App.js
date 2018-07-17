@@ -12,11 +12,21 @@ import UsersMovieList from './containers/UsersMovieList/UsersMovieList';
 class App extends Component {
   componentDidMount = () => {
     this.props.fetchUser();
+
+    const app = document.getElementById('pre-loader');
+    if (app) {
+      app.classList.add('fade-out');
+
+      setTimeout(() => {
+        app.innerHTML = '';
+        document.querySelector('.App').classList.add('visible');
+      }, 1000);
+    }
   };
 
   render() {
     return (
-      <div>
+      <div className="App">
         <Navigation />
         <Switch>
           <Route path="/search" component={Search} />
